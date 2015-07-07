@@ -46,6 +46,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     /* General styles */
+    
+    #paperDrawerPanel:not(.resolved) {
+        opacity: 0;
+        display: block;
+        overflow: hidden;
+    }
+    
+    #paperDrawerPanel.resolved {
+        transition: opacity ease-in 0.2s;
+    }
+    
 
     #drawerToolbar {
         color: var(--secondary-text-color);

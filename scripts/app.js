@@ -23,6 +23,12 @@
     // have resolved and content has been stamped to the page
     app.addEventListener('dom-change', function () {
         console.log('Our app is ready to rock!');
+        document.querySelector('#paperDrawerPanel').removeAttribute('unresolved');
+//        document.querySelector('#paperDrawerPanel').removeAttribute('class', 'unresolved');
+        setTimeout(function () {
+            document.querySelector('#loading').setAttribute('style', 'display: none');
+            document.querySelector('#paperDrawerPanel').setAttribute('class', 'resolved');
+        });
     });
 
     // See https://github.com/Polymer/polymer/issues/1381
